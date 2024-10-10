@@ -3,10 +3,16 @@ pool: Azure Pipelines
 steps:
   - checkout: self
 
+  - task: UseNode@1
+    inputs:
+      versionSpec: '16.x'  # Ensure the correct Node.js version, adjust as per project requirements
+
   - script: |
       npm install --legacy-peer-deps --verbose
       npm run build
-    displayName: 'npm install and build'
+    displayName: 'npm install with legacy peer deps and build'
+
+
 
   - task: SnykSecurityScan@1
     inputs:
