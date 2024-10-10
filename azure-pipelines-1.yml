@@ -9,8 +9,7 @@ steps:
 
   - script: |
       npm install --legacy-peer-deps --verbose
-      npm run build
-    displayName: 'npm install with legacy peer deps and build'
+    displayName: 'npm install with legacy peer deps'
 
 
 
