@@ -21,3 +21,9 @@ steps:
       monitorWhen: 'always'
       failOnIssues: true
       additionalArguments: '--fail-on=all'
+
+  - task: SnykSecurityScan@1
+    inputs:
+      serviceConnectionEndpoint: 'SNYK_TOKEN'
+      testType: 'code'
+      failOnIssues: true
