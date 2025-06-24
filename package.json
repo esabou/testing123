@@ -97,7 +97,7 @@
     ]
   },
   "dependencies": {
-    "sqlite3": "5.0.2"
+    "sqlite3": "5.1.7"
   },
   "devDependencies": {
     "chai": "^4.2.0",
